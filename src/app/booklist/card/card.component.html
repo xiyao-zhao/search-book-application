@@ -1,0 +1,13 @@
+<div class="card">
+    <img src="{{book.image}}" alt="book front cover">
+    <div class="info">
+        <h2>{{ book.title }}</h2>
+        <p><span>Authors:</span> {{ book.authors }}</p>
+        <p><span>Publisher:</span> {{ book.publisher }}</p>
+        <p><span>Published Date:</span> {{ book.publishedDate }}</p>
+        <p (click)="handleLongString()">
+            <span>Description:</span> {{ book.description | shortenString: collapse }}
+        </p>
+    </div>
+</div>
+

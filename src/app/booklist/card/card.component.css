@@ -1,0 +1,11 @@
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    height: 30%;
+}
+
+h2, span {
+    font-weight: bold;
+}
