@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BooklistComponent } from './booklist/booklist.component';
 import { CardComponent } from './booklist/card/card.component';
 import { ShortenStringPipe } from './shorten-string.pipe';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ShortenStringPipe } from './shorten-string.pipe';
     BooklistComponent,
     CardComponent,
     ShortenStringPipe,
+    WishlistComponent,
   ],
   imports: [
     BrowserModule,

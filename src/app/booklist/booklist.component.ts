@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Book } from '../book.interface';
 import { Observable } from 'rxjs';
-
 @Component({
     selector: 'app-booklist',
     templateUrl: './booklist.component.html',
@@ -10,6 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class BooklistComponent implements OnInit {
     books: Book[];
+    wishlist: string[];
+
     constructor(private dataService: DataService) { }
 
     ngOnInit(): void {
@@ -17,6 +18,11 @@ export class BooklistComponent implements OnInit {
             this.books = data;
             console.log(this.books)
         });
+
     }
 
+    addToWishlist(e: any) {
+        this.wishlist.push(e);
+    }
+ 
 }

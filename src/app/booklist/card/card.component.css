@@ -2,10 +2,24 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 70%;
+    gap: 20px;
+    width: 90%;
+    margin-left: 20px;
     height: 30%;
+    padding: 10px;
+}
+
+.card:hover {
+    border: 5px silver;
+    border-radius: 10px;
+    border-style: none solid solid none;
+    
 }
 
 h2, span {
     font-weight: bold;
+}
+
+img {
+    margin-top: 10px;
 }

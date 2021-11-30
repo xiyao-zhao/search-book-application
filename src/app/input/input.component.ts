@@ -25,7 +25,7 @@ export class InputComponent implements OnInit {
             map((event: any) => (<HTMLInputElement>event.target).value),
             debounceTime(1000),
             switchMap(bookname => {
-                console.log(bookname);
+                //console.log(bookname);
                 return this.dataService.getAll(bookname);
             })
             ).subscribe(data => this.book$ = data);
