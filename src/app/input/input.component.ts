@@ -1,8 +1,7 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { DataService } from '../data.service';
-import { fromEvent, Observable, Subject, Subscription } from 'rxjs';
-import { debounceTime, tap, map, switchMap } from 'rxjs/operators';
-import { BooklistComponent } from '../booklist/booklist.component';
+import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
+import { DataService } from '../service/data.service';
+import { fromEvent, Observable} from 'rxjs';
+import { debounceTime, map, switchMap } from 'rxjs/operators';
 import { Book } from '../book.interface';
 
 @Component({
@@ -25,7 +24,6 @@ export class InputComponent implements OnInit {
             map((event: any) => (<HTMLInputElement>event.target).value),
             debounceTime(1000),
             switchMap(bookname => {
-                //console.log(bookname);
                 return this.dataService.getAll(bookname);
             })
             ).subscribe(data => this.book$ = data);

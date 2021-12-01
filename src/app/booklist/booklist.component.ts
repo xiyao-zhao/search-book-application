@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../service/data.service';
 import { Book } from '../book.interface';
-import { Observable } from 'rxjs';
 @Component({
     selector: 'app-booklist',
     templateUrl: './booklist.component.html',
     styleUrls: ['./booklist.component.css']
 })
+
 export class BooklistComponent implements OnInit {
     books: Book[];
-    wishlist: string[];
 
     constructor(private dataService: DataService) { }
 
@@ -20,9 +19,4 @@ export class BooklistComponent implements OnInit {
         });
 
     }
-
-    addToWishlist(e: any) {
-        this.wishlist.push(e);
-    }
- 
 }

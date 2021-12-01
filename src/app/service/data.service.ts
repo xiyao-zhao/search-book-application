@@ -1,7 +1,7 @@
 import { Observable, Subject, pluck, map, tap } from "rxjs";
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
-import { Book } from "./book.interface";
+import { Book } from "../book.interface";
 
 @Injectable()
 export class DataService {
@@ -26,5 +26,4 @@ export class DataService {
             })
         )
     }
-
 }

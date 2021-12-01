@@ -1,4 +1,8 @@
-<p>My Reading Wishlist()</p>
-<ul>
-    
+<p>My Reading Wishlist({{ wishlists.length }})</p>
+<ul *ngFor="let list of wishlists">
+    <li>{{ list.bookname }}</li>
+    <button 
+        (click)="removeList($event)" 
+        [value]="list.bookname"
+    >Delete</button>
 </ul>

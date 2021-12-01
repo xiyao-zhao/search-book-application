@@ -9,11 +9,44 @@ header {
 }
 
 h1 {
-    margin: 0
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     font-size: 20px;
     color: white;
+}
+
+.content {
+    display: flex;
+    
+    justify-content: space-between;
+    width: 90%;
+}
+
+.left {
+    width: 70%;
+}
+
+.right {
+    width: 30%;
+}
+
+@media screen and (max-width: 900px){
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+
+    .left {
+        width: 90%;
+    }
+
+    .right {
+        width: 90%;
+        margin: auto;
+    }
 }

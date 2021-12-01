@@ -1,5 +1,30 @@
-* {
-    position: fixed;
-    width: 30%;
-    right: 10px;
+p {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li {
+    list-style-type: none;
+    line-height: 3;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+}
+
+button {
+    padding: 0 10px;
+    border: 1px solid white;
+    background-color: rgb(144, 54, 170);
+    color: white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    p {
+        text-align: center;
+    }
 }
