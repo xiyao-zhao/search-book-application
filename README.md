@@ -1,5 +1,7 @@
 # SearchBook
 
+This project was built with Angular framework. It allows users to search the book by the title, click the card to add it to the wishlist, and click the button to delete it from the wishlist.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 ## Development server
