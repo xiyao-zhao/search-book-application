@@ -14,8 +14,6 @@ export class CardComponent implements OnInit {
 
     collapse = true;
     wishlists$: Observable<Wishlist[]>; 
-    wishlists: Wishlist[] = [];
-    nextId = 0;
 
     constructor(private bookService: BookService) {}
 

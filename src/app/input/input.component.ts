@@ -15,7 +15,7 @@ export class InputComponent implements OnInit {
     @ViewChild('input', {static: true})input: ElementRef;
 
     inputSubscription: any;
-    book$: Observable<Book[]>;
+    books$: Observable<Book[]>;
 
     constructor (private dataService: DataService) {}
 
@@ -26,11 +26,11 @@ export class InputComponent implements OnInit {
             switchMap(bookname => {
                 return this.dataService.getAll(bookname);
             })
-            ).subscribe(data => this.book$ = data);
+            ).subscribe(data => this.books$ = data);
     }
 
     ngOnInit() {
-        this.book$ = this.dataService.books$;
+        this.books$ = this.dataService.books$;
     }
 
     ngAfterViewInit() {
