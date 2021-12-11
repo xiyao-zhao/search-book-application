@@ -13,12 +13,12 @@ export class CardComponent implements OnInit {
     @Input() book: Book;
 
     collapse = true;
-    wishlists$: Observable<Wishlist[]>; 
+    //wishlists$: Observable<Wishlist[]>; 
 
     constructor(private bookService: BookService) {}
 
     ngOnInit(): void { 
-        this.wishlists$ = this.bookService.wishlists$;
+        //this.wishlists$ = this.bookService.wishlists$;
     }
 
     handleLongString() {
